@@ -1,0 +1,66 @@
+{% extends 'hospital/patient_base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .note {
+      text-align: center;
+      height: 70px;
+      background: blue;
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+
+      .table th, .table td {
+        padding: 8px; /* Reduce padding to decrease spacing */
+    }
+    .badge {
+        margin: 0; /* Remove margin around badges */
+        padding: 2px 4px; /* Adjust padding inside badges if needed */
+    }
+</style>
+<div class="container mt-5">
+    <h2 class="text-center note">Patient Information</h2>
+    <div class="row text-left mt-4">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Category</th>
+                      <th scope="col">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Symptoms</td>
+                        <td><span class="badge">{{symptoms}}</td>
+                    </tr>
+                    <tr>
+                        <td>Doctor Name</td>
+                        <td><span class="badge">{{doctorName}}</td>
+                    </tr>
+                    <tr>
+                      <td>Doctor Mobile</td>
+                        <td><span class="badge">{{doctorMobile}}</td>
+                    </tr>
+                <tr>
+                      <td>Doctor Address</td>
+                        <td><span class="badge">{{doctorAddress}}</td>
+                    </tr>
+                <tr>
+                      <td>Doctor Department</td>
+                        <td><span class="badge">{{doctorDepartment}}</td>
+                    </tr>
+                <tr>
+                      <td>Appointment Details</td>
+                        <td><span class="badge">{{admitDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+{% endblock content %}
+{% include "hospital/footer.html" %}
+

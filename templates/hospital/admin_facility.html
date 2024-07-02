@@ -1,0 +1,32 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <a href="/location_management" class="btn btn-primary btn-block mb-4">
+        Location management
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/department_management" class="btn btn-success btn-block mb-4">
+        Department management
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/resource_management" class="btn btn-warning btn-block mb-4">
+        Resource management
+      </a>
+    </div>
+  </div>
+</div>
+<br>
+
+{% endblock %}
+
+{% include "hospital/footer.html" %}

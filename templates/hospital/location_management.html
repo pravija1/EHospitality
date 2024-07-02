@@ -1,0 +1,63 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+
+
+}
+
+  </style>
+</head>
+
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Location Management Home Page</h6>
+    </div>
+    <div class="panel-heading d-flex justify-content-between align-items-center">
+      <h3 class="panel-title">Locations List</h3>
+      <a href="{% url 'add_location' %}" class="btn btn-secondary">Add New Location</a>
+
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      {% for d in locations %}
+      <tr>
+
+         <td>{{ d.get_name }}</td>
+          <td>{{ d.address }}</td>
+<!--        <td><a class="btn btn-primary btn-xs" href="{% url 'update-doctor' d.id  %}"><span class="glyphicon glyphicon-edit"></span></a></td>-->
+        <td><a class="btn btn-danger btn-xs" href="{% url 'delete_location' d.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+{% include "hospital/footer.html" %}

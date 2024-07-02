@@ -1,0 +1,44 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <a href="/admin-view-patient" class="btn btn-primary btn-block mb-4">
+        Patient Record
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/admin-add-patient" class="btn btn-success btn-block mb-4">
+        Add Patient
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/admin-approve-patient" class="btn btn-warning btn-block mb-4">
+        Approve Patient Registration
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/admin-discharge-patient" class="btn btn-warning btn-block mb-4">
+        Patient Billing
+      </a>
+    </div>
+
+<br>
+<!--    <div class="col-md-8">-->
+<!--      <a href="/admin-view-doctor-specialisation" class="btn btn-danger btn-block mb-4">-->
+<!--        Doctor Specialisation-->
+<!--      </a>-->
+<!--    </div>-->
+  </div>
+</div>
+
+<br><br><br><br><br>
+
+{% endblock content %}
+{% include "hospital/footer.html" %}
+

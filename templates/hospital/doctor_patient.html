@@ -1,0 +1,38 @@
+{% extends 'hospital/doctor_base.html' %}
+{% load static %}
+{% block content %}
+<br><br>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <a href="/doctor-view-patient" class="btn btn-primary btn-block mb-4">
+        Patient Record
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/doctor-prescribe-patient" class="btn btn-warning btn-block mb-4">
+        Prescribe Patient
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/doctor-view-discharge-patient" class="btn btn-danger btn-block mb-4">
+        Billed Patients List
+      </a>
+    </div>
+
+<br>
+<!--    <div class="col-md-8">-->
+<!--      <a href="/admin-view-doctor-specialisation" class="btn btn-danger btn-block mb-4">-->
+<!--        Doctor Specialisation-->
+<!--      </a>-->
+<!--    </div>-->
+  </div>
+</div>
+
+<br><br><br><br><br>
+
+{% endblock content %}
+{% include "hospital/footer.html" %}

@@ -1,0 +1,152 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .note {
+      text-align: center;
+      height: 80px;
+      background: blue;
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+</style>
+<div class="container mt-5">
+    <h2 class="text-center note">Welcome to Admin Home</h2>
+    <div class="row text-center mt-4">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Category</th>
+                        <th scope="col">Count</th>
+                        <th scope="col">Waiting Approval</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Total Doctors</td>
+                        <td><span class="badge badge-primary">{{doctorcount}}</td>
+                        <td><span class="badge badge-warning">{{pendingdoctorcount}}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Patients</td>
+                        <td><span class="badge badge-primary">{{patientcount}}</td>
+                        <td><span class="badge badge-warning">{{pendingpatientcount}}</span></td>
+                    </tr>
+                    <tr>
+                        <td>Total Appointments</td>
+                        <td><span class="badge badge-primary">{{appointmentcount}}</td>
+                        <td><span class="badge badge-warning">{{pendingappointmentcount}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--  <div class="row text-center mt-4">-->
+<!--    <div class="col-md-4">-->
+<!--      <div class="card">-->
+<!--        <div class="card-body">-->
+<!--          <h4 class="card-title">Total Doctors</h4>-->
+<!--          <p class="card-text display-4">{{doctorcount}}</p>-->
+<!--          <h5>Doctors waiting approval: <span class="badge badge-warning">{{pendingdoctorcount}}</span></h5>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4">-->
+<!--      <div class="card">-->
+<!--        <div class="card-body">-->
+<!--          <h4 class="card-title">Total Patients</h4>-->
+<!--          <p class="card-text display-4">{{patientcount}}</p>-->
+<!--          <h5>Patients waiting approval: <span class="badge badge-warning">{{pendingpatientcount}}</span></h5>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4">-->
+<!--      <div class="card">-->
+<!--        <div class="card-body">-->
+<!--          <h4 class="card-title">Total Appointments</h4>-->
+<!--          <p class="card-text display-4">{{appointmentcount}}</p>-->
+<!--          <h5>Appointments waiting approval: <span class="badge badge-warning">{{pendingappointmentcount}}</span></h5>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+
+  <br><br><br><br>
+
+<!--  <div class="row">-->
+<!--    <div class="col-md-6">-->
+<!--      <div class="panel panel-primary">-->
+<!--        <div class="panel-heading text-center">-->
+<!--          <h6 class="panel-title">Recent Doctors</h6>-->
+<!--        </div>-->
+<!--        <table class="table table-hover" id="dev-table">-->
+<!--          <thead>-->
+<!--            <tr>-->
+<!--              <th>Name</th>-->
+<!--              <th>Department</th>-->
+<!--              <th>Mobile</th>-->
+<!--              <th>Status</th>-->
+<!--            </tr>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--            {% for d in doctors %}-->
+<!--            <tr>-->
+<!--              <td>{{d.get_name}}</td>-->
+<!--              <td>{{d.department}}</td>-->
+<!--              <td>{{d.mobile}}</td>-->
+<!--              {% if d.status %}-->
+<!--              <td><span class="label label-primary">Permanent</span></td>-->
+<!--              {% else %}-->
+<!--              <td><span class="label label-success">On Hold</span></td>-->
+<!--              {% endif %}-->
+<!--            </tr>-->
+<!--            {% endfor %}-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="col-md-6">-->
+<!--      <div class="panel panel-primary">-->
+<!--        <div class="panel-heading text-center">-->
+<!--          <h6 class="panel-title">Recent Patients</h6>-->
+<!--        </div>-->
+<!--        <table class="table table-hover" id="dev-table">-->
+<!--          <thead>-->
+<!--            <tr>-->
+<!--              <th>Name</th>-->
+<!--              <th>Symptoms</th>-->
+<!--              <th>Mobile</th>-->
+<!--              <th>Address</th>-->
+<!--              <th>Status</th>-->
+<!--            </tr>-->
+<!--          </thead>-->
+<!--          <tbody>-->
+<!--            {% for p in patients %}-->
+<!--            <tr>-->
+<!--              <td>{{p.get_name}}</td>-->
+<!--              <td>{{p.symptoms}}</td>-->
+<!--              <td>{{p.mobile}}</td>-->
+<!--              <td>{{p.address}}</td>-->
+<!--              {% if p.status %}-->
+<!--              <td><span class="label label-primary">Admitted</span></td>-->
+<!--              {% else %}-->
+<!--              <td><span class="label label-success">On Hold</span></td>-->
+<!--              {% endif %}-->
+<!--            </tr>-->
+<!--            {% endfor %}-->
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+{% endblock content %}
+
+{% include "hospital/footer.html" %}

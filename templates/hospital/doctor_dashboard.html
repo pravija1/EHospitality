@@ -1,0 +1,79 @@
+{% extends 'hospital/doctor_base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .note {
+      text-align: center;
+      height: 70px;
+      background: blue;
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+</style>
+<div class="container mt-5">
+    <h2 class="text-center note">Welcome to Doctor Home</h2>
+    <div class="row text-center mt-4">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Category</th>
+                        <th scope="col">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Awaiting Appointments</td>
+                        <td><span class="badge badge-primary">{{appointmentcount}}</td>
+                    </tr>
+                    <tr>
+                        <td>Current Patients</td>
+                        <td><span class="badge badge-primary">{{patientcount}}</td>
+                    </tr>
+                    <tr>
+                      <td>Prescribed  Patients</td>
+                        <td><span class="badge badge-primary">{{patientdischarged}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="panel panel-primary" style="margin-left:15%;">
+      <div class="panel-heading" style="text-align:center;color:blue;">
+        <h3 class="panel-title">Awaiting Appointments</h3>
+      </div>
+      <table class="table table-hover" id="dev-table">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Image</th>
+            <th>Description</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        {% for a,p in appointments %}
+        <tr>
+          <td>{{a.patientName}}</td>
+          <td> <img src="{% static p.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+          <td>{{a.description}}</td>
+          <td>{{p.mobile}}</td>
+          <td>{{p.address}}</td>
+          <td>{{a.appointmentDate}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+{% include "hospital/footer.html" %}

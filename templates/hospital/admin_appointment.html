@@ -1,0 +1,41 @@
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+<br><br>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <a href="/admin-view-appointment" class="btn btn-primary btn-block mb-4">
+        View Appointment
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/admin-approve-appointment" class="btn btn-success btn-block mb-4">
+        Approve Appointment
+      </a>
+    </div>
+
+    <div class="col-md-8">
+      <a href="/admin-add-appointment" class="btn btn-warning btn-block mb-4">
+        Book Appointment
+      </a>
+    </div>
+<br>
+<!--    <div class="col-md-8">-->
+<!--      <a href="/admin-view-doctor-specialisation" class="btn btn-danger btn-block mb-4">-->
+<!--        Doctor Specialisation-->
+<!--      </a>-->
+<!--    </div>-->
+  </div>
+</div>
+
+<br>
+<br><br><br><br>
+
+{% endblock content %}
+
+<br>
+{% include "hospital/footer.html" %}
+

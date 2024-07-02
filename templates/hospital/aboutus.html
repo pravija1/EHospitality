@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About</title>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+  .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+    }
+  </style>
+  <title></title>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br><br>
+<div class="center-content">
+  <h3 class='alert alert-success' style="margin-bottom:0px;">About Us !</h3>
+
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <p class="lead">Our Ehospitality service integrates patient care, admin tasks, and healthcare operations into a digital platform, enhancing efficiency of offered healthcare facilities.
+   Your health is our priority. Your journey to better health starts here.</p>
+    <hr class="my-4">
+    <p>Explore our Website</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+    </p>
+  </div>
+</div>
+
+  {% include "hospital/footer.html" %}
+</body>
+
+</html>
