@@ -6,11 +6,16 @@ platform, fostering efficiency, communication, and quality of care. The system
 comprises dedicated modules for patients, administrators, and doctors, each offering
 specialized functionalities to support their respective roles within the healthcare
 ecosystem.
+
+
 Technologies used:
 Front-End: HTML, CSS, JavaScript, Bootstrap
 Back-End: Python, Django, MySQL or PostgreSQL
-Deployment: Pythonanywhere
+
+
+
 Modules:
+
 Patient Module:
 Patient Registration: Enables patients to register their demographic information
 securely.
@@ -22,6 +27,8 @@ Billing and Payments: Enables patients to view and manage billing statements, ma
 payments securely, and access insurance information.
 Health Education Resources: Offers access to educational materials, health tips, and
 resources to promote wellness and disease prevention.
+
+
 Admin Module:
 User Management: Allows administrators to manage user accounts, permissions, and
 access levels within the system.
@@ -29,6 +36,8 @@ Facility Management: Facilitates management of healthcare facility details, incl
 locations, departments, and resources.
 Appointment Management: Provides tools for scheduling, coordinating, and
 managing appointments across departments and healthcare providers.
+
+
 Doctor Module:
 Patient Management: Provides access to patient records, medical histories, and
 treatment plans, facilitating informed decision-making.
